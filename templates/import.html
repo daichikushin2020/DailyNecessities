@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block content %}
+<div class="container">
+    <br>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file">
+        <input type="submit" value="アップロード">
+    </form>
+    <br>
+    <a href="{% url 'updl' %}" class="btn btn-dark btn-sm active" role="button" aria-pressed="true">戻る</a>
+</div>
+{% endblock content %}

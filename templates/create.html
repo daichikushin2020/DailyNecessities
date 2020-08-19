@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <br>
+    <form action="" method="POST">{% csrf_token %}
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">一般名称</label>
+            <input class="form-control" name='name' type="text">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">商品名</label>
+            <input class="form-control" name='productname' type="text">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">メーカー名</label>
+            <input class="form-control" name='company' type="text">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">初期在庫</label>
+            <input class="form-control" name='stocknum' type="text">
+        </div>
+        <button type="submit" class="btn btn-success btn-sm">新規作成</button>
+    </form>
+    <br>
+    <a href="{% url 'list' %}" class="btn btn-dark btn-sm active" role="button" aria-pressed="true">戻る</a>
+</div>
+
+{% endblock content %}

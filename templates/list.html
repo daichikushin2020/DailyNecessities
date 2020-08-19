@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block content %}
+<div class="container">
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">一般名称</th>
+                <th scope="col">商品名</th>
+                <th scope="col">メーカー名</th>
+                <th scope="col">在庫数</th>
+            </tr>
+        </thead>
+        {% for item in object_list %}
+        <tbody>
+            <tr>
+                <th scope="row"><a href="{% url 'detail' item.pk %}"> {{item.name}}</a></th>
+                <td>{{item.productname}}</td>
+                <td>{{item.company}}</td>
+                <td>{{item.stocknum}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+
+</div>
+
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block content %}
+<div class="container">
+    <br>
+    <div class="col-sm">
+        <nav class="pull-right header">
+            <ul id="menu">
+                <li><a href="{% url 'import' %}" class="">インポート</a></li>
+                <br>
+                <li><a href="{% url 'export' %}" class="">エクスポート</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br>
+    <a href="{% url 'list' %}" class="btn btn-dark btn-sm active" role="button" aria-pressed="true">戻る</a>
+</div>
+{% endblock content %}
