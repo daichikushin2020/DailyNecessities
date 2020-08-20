@@ -24,7 +24,7 @@
     <br>
     <a class="btn btn-primary btn-sm" href="{% url 'plus' object.pk %}" role="button"> ＋ </a>
     <a class="btn btn-warning btn-sm" href="{% url 'mainas' object.pk %}" role="button"> ー </a>
-    <a class="btn btn-danger btn-sm" href="#" role="button">削除</a>
+    <a class="btn btn-danger btn-sm" href="{% url 'list' %}" role="button">削除</a>
     <br>
     <br>
     <a href="{% url 'list' %}" class="btn btn-dark btn-sm active" role="button" aria-pressed="true">戻る</a>
